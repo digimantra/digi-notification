@@ -1,6 +1,6 @@
 <?php
 
-namespace YourNamespace\FcmHelper;
+namespace LegacyFcm\FcmHelper;
 
 use Illuminate\Support\ServiceProvider;
 

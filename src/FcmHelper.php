@@ -1,5 +1,5 @@
 <?php
-namespace YourNamespace\FcmHelper;
+namespace LegacyFcm\FcmHelper;
 
 use Google\Client as GoogleClient;
 use Google\Service\FirebaseCloudMessaging;
