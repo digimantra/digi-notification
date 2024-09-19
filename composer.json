@@ -1,0 +1,23 @@
+{
+    "name": "legacy-fcm/laravel-fcm-notifications",
+    "description": "A Laravel package to send FCM push notifications.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "LegacyFcm\\FcmHelper\\": "src/"
+        }
+    },
+    "require": {
+        "google/apiclient": "^2.9",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LegacyFcm\\FcmHelper\\FcmServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
