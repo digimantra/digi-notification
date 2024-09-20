@@ -55,19 +55,16 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
     Sending FCM Notifications:
 
     ```php
-        // Use Namespaces
-        use DigiNotification\FcmHelper\FcmHelper;
-        use DigiNotification\FcmHelper\Jobs\SendFcmNotificationJob;
-
+        ### Assigning variables 
         $tokens = ['device_token_1', 'device_token_2']; // Array of device tokens to which the notification will be sent.
         $title = 'New Notification'; // The title of the notification.
         $body = 'This is the body of the notification'; // The body content of the notification.
         $data = ['key' => 'value']; // (Optional) Additional custom data.
         
-        // Example Send FCM notificaiton Dispatch
+        ### Example Send FCM notificaiton Dispatch
         FcmHelper::sendFcmNotification($tokens, $title, $body, $data); 
 
-        // Example Job Dispatch
+        ### Example Job Dispatch
         SendFcmNotificationJob::dispatch($tokens, $title, $body, $data);
         (The notifications will be sent in the background using Laravel queues)
     ```
