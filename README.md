@@ -2,7 +2,7 @@
 
 ![Packagist Version](https://img.shields.io/packagist/v/legacy-fcm/laravel-fcm-notifications)
 ![Packagist Downloads](https://img.shields.io/packagist/dt/legacy-fcm/laravel-fcm-notifications)
-![GitHub License](https://img.shields.io/github/license/legacy-fcm/laravel-fcm-notifications)
+![GitHub License](https://img.shields.io/github/license/legacy-fcm/laravel-fcm-notifications?style=flat-square)
 
 This package provides an easy way to send Firebase Cloud Messaging (FCM) push notifications in Laravel applications using Google's Firebase API.
 
