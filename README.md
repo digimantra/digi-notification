@@ -1,8 +1,8 @@
 # Laravel FCM Notifications Package
 
-![Packagist Version](https://img.shields.io/packagist/v/digimantra/digi-notifications)
-![Packagist Downloads](https://img.shields.io/packagist/dt/digimantra/digi-notifications)
-![GitHub License](https://img.shields.io/github/license/digimantra/digi-notifications?style=flat-square)
+![Packagist Version](https://img.shields.io/packagist/v/digimantra/digi-notification)
+![Packagist Downloads](https://img.shields.io/packagist/dt/digimantra/digi-notification)
+![GitHub License](https://img.shields.io/github/license/digimantra/digi-notification?style=flat-square)
 
 This package provides an easy way to send Firebase Cloud Messaging (FCM) push notifications in Laravel applications using Google's Firebase API.
 
