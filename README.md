@@ -54,7 +54,7 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 
 ### Sending FCM Notifications
 
-    ```php
+    ```PHP
     use DigiNotification\FcmHelper\FcmHelper;
     use DigiNotification\FcmHelper\Jobs\SendFcmNotificationJob;
 
