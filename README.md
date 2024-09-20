@@ -54,58 +54,58 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 
 ### Sending FCM Notifications
 
-```php
-use LegacyFcm\FcmHelper\FcmHelper;
+    ``php
+    use LegacyFcm\FcmHelper\FcmHelper;
 
-$tokens = ['device_token_1', 'device_token_2'];
-$title = 'New Notification';
-$body = 'This is the body of the notification';
-$data = ['key' => 'value']; // Optional custom data
- 
-FcmHelper::sendFcmNotification($tokens, $title, $body, $data);
+    $tokens = ['device_token_1', 'device_token_2'];
+    $title = 'New Notification';
+    $body = 'This is the body of the notification';
+    $data = ['key' => 'value']; // Optional custom data
+    
+    FcmHelper::sendFcmNotification($tokens, $title, $body, $data);
 
-// $tokens: Array of device tokens to which the notification will be sent.
-// $title: The title of the notification.
-// $body: The body content of the notification.
-// $data: (Optional) Additional custom data.
+    // $tokens: Array of device tokens to which the notification will be sent.
+    // $title: The title of the notification.
+    // $body: The body content of the notification.
+    // $data: (Optional) Additional custom data.
 
-The notifications will be sent in the background using Laravel queues.
+    The notifications will be sent in the background using Laravel queues.
 
-### Example Job Dispatch
+    ### Example Job Dispatch
 
-use LegacyFcm\FcmHelper\Jobs\SendFcmNotificationJob;
+    use LegacyFcm\FcmHelper\Jobs\SendFcmNotificationJob;
 
-SendFcmNotificationJob::dispatch($tokens, $title, $body, $data);
+    SendFcmNotificationJob::dispatch($tokens, $title, $body, $data);
 
 ## Configuration
 
 ### Queue Configuration
 
-Ensure your queue system is set up properly by adding the following to your `.env` file:
+    Ensure your queue system is set up properly by adding the following to your `.env` file:
 
 ### env
-QUEUE_CONNECTION=database
+    QUEUE_CONNECTION=database
 
 # Then, create the `jobs` table and run the migration:
-php artisan queue:table
-php artisan migrate
+    php artisan queue:table
+    php artisan migrate
 
-# Logging
+### Logging
 
 # To enable logging, add this to your `.env` file:
-FCM_LOGGING=true
+    FCM_LOGGING=true
 
-Set to false to disable logging.
+    Set to false to disable logging.
 
-Known Issues
+### Known Issues
 Ensure FCM tokens are valid, as invalid tokens might cause delivery failures.
 Invalid service account credentials will cause the package to fail to obtain an access token from Firebase.
 
-License
+### License
 This package is open-sourced under the MIT license.
 
-Contribution
+### Contribution
 Feel free to contribute by opening issues or submitting pull requests for new features or bug fixes.
 
-Support
+### Support
 For support or more details, you can reach out at onkar.soni@digimantra.com.
