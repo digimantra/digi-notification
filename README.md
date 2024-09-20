@@ -30,13 +30,13 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 1. **Install via Composer**
 
     ```bash
-    composer require digimantra/digi-notifications
+    composer require digimantra/digi-notification
     ```
 
 2. **Publish Configuration**
 
     ```bash
-    php artisan vendor:publish --tag=config --provider="LegacyFcm\FcmHelper\FcmServiceProvider"
+    php artisan vendor:publish --tag=config --provider="DigiNotification\FcmHelper\FcmServiceProvider"
     ```
 
 3. **Set Up Environment Variables**
@@ -55,27 +55,23 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 ### Sending FCM Notifications
 
     ```php
-    use LegacyFcm\FcmHelper\FcmHelper;
+    use DigiNotification\FcmHelper\FcmHelper;
+    use DigiNotification\FcmHelper\Jobs\SendFcmNotificationJob;
 
-    $tokens = ['device_token_1', 'device_token_2'];
-    $title = 'New Notification';
-    $body = 'This is the body of the notification';
-    $data = ['key' => 'value']; // Optional custom data
+    $tokens = ['device_token_1', 'device_token_2']; // Array of device tokens to which the notification will be sent.
+    $title = 'New Notification'; // The title of the notification.
+    $body = 'This is the body of the notification'; // The body content of the notification.
+    $data = ['key' => 'value']; // (Optional) Additional custom data.
     
-    FcmHelper::sendFcmNotification($tokens, $title, $body, $data);
+   
+    ### Example Send FCM notificaiton
+    FcmHelper::sendFcmNotification($tokens, $title, $body, $data); 
 
-    // $tokens: Array of device tokens to which the notification will be sent.
-    // $title: The title of the notification.
-    // $body: The body content of the notification.
-    // $data: (Optional) Additional custom data.
-
-    The notifications will be sent in the background using Laravel queues.
 
     ### Example Job Dispatch
 
-    use LegacyFcm\FcmHelper\Jobs\SendFcmNotificationJob;
-
     SendFcmNotificationJob::dispatch($tokens, $title, $body, $data);
+    (The notifications will be sent in the background using Laravel queues)
     ```
 ## Configuration
 
@@ -97,14 +93,14 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
     Set to false to disable logging.
 
 ## Known Issues
-Ensure FCM tokens are valid, as invalid tokens might cause delivery failures.
-Invalid service account credentials will cause the package to fail to obtain an access token from Firebase.
+    Ensure FCM tokens are valid, as invalid tokens might cause delivery failures.
+    Invalid service account credentials will cause the package to fail to obtain an access token from Firebase.
 
 ## License
-This package is open-sourced under the MIT license.
+    This package is open-sourced under the MIT license.
 
 ## Contribution
-Feel free to contribute by opening issues or submitting pull requests for new features or bug fixes.
+    Feel free to contribute by opening issues or submitting pull requests for new features or bug fixes.
 
 ## Support
-For support or more details you can reach out at it@digimantra.com.
+    For support or more details you can reach out at it@digimantra.com.

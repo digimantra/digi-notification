@@ -1,6 +1,6 @@
 <?php
 
-namespace LegacyFcm\FcmHelper;
+namespace DigiNotification\FcmHelper;
 
 use Illuminate\Support\ServiceProvider;
 

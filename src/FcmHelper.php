@@ -1,8 +1,8 @@
 <?php
 
-namespace LegacyFcm\FcmHelper;
+namespace DigiNotification\FcmHelper;
 
-use LegacyFcm\FcmHelper\Jobs\SendFcmNotificationJob;
+use DigiNotification\FcmHelper\Jobs\SendFcmNotificationJob;
 use Illuminate\Support\Facades\Log;
 
 class FcmHelper
