@@ -54,7 +54,7 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 
 ### Sending FCM Notifications
 
-    ``php
+    ```php
     use LegacyFcm\FcmHelper\FcmHelper;
 
     $tokens = ['device_token_1', 'device_token_2'];
@@ -76,7 +76,7 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
     use LegacyFcm\FcmHelper\Jobs\SendFcmNotificationJob;
 
     SendFcmNotificationJob::dispatch($tokens, $title, $body, $data);
-
+    ```
 ## Configuration
 
 ### Queue Configuration
