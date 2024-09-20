@@ -15,7 +15,6 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 - [Logging](#logging)
 - [Known Issues](#known-issues)
 - [License](#license)
-- [Contribution](#contribution)
 - [Support](#support)
 
 ## Requirements
@@ -52,12 +51,13 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 
 ## Usage
 
-Sending FCM Notifications:
+### Sending FCM Notifications:
 
 ```php
+
 ### Use Namespaces
-use DigiNotification\FcmHelper\FcmHelper;
-use DigiNotification\FcmHelper\Jobs\SendFcmNotificationJob;
+use DigiNotification\FcmHelper\FcmHelper; 
+
 ### Assigning variables 
 $tokens = ['device_token_1', 'device_token_2']; // Array of device tokens to which the notification will be sent.
 $title = 'New Notification'; // The title of the notification.
@@ -65,11 +65,8 @@ $body = 'This is the body of the notification'; // The body content of the notif
 $data = ['key' => 'value']; // (Optional) Additional custom data.
 
 ### Example Send FCM notificaiton Dispatch
-FcmHelper::sendFcmNotification($tokens, $title, $body, $data); 
+FcmHelper::sendFcmNotification($tokens, $title, $body, $data);  
 
-### Example Job Dispatch
-SendFcmNotificationJob::dispatch($tokens, $title, $body, $data);
-(The notifications will be sent in the background using Laravel queues)
 ```
 
 ## Configuration
@@ -85,21 +82,22 @@ SendFcmNotificationJob::dispatch($tokens, $title, $body, $data);
     php artisan queue:table
     php artisan migrate
 
+
 ## Logging
 
 ### To enable logging, add this to your `.env` file:
     FCM_LOGGING=true
     Set to false to disable logging.
 
+
 ## Known Issues
     Ensure FCM tokens are valid, as invalid tokens might cause delivery failures.
     Invalid service account credentials will cause the package to fail to obtain an access token from Firebase.
 
+
 ## License
     This package is open-sourced under the MIT license.
 
-## Contribution
-    Feel free to contribute by opening issues or submitting pull requests for new features or bug fixes.
 
 ## Support
     For support or more details you can reach out at it@digimantra.com.
