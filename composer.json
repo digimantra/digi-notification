@@ -1,6 +1,6 @@
 {
-    "name": "digimantra/digi-notifications",
-    "description": "A Laravel package to send FCM push notifications.",
+    "name": "digimantra/digi-notification",
+    "description": "A Laravel package to send FCM push notification.",
     "type": "library",
     "license": "MIT",
     "authors": [
