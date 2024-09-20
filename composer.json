@@ -1,16 +1,22 @@
 {
-    "name": "legacy-fcm/laravel-fcm-notifications",
+    "name": "digimantra/digi-notifications",
     "description": "A Laravel package to send FCM push notifications.",
     "type": "library",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Onkar Soni",
+            "email": "onkar.soni@digimantra.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "LegacyFcm\\FcmHelper\\": "src/"
         }
     },
-    "require": {
+   "require": {
         "google/apiclient": "^2.9",
-        "illuminate/support": "^8.0|^9.0|^10.0"
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0"
     },
     "extra": {
         "laravel": {
@@ -20,5 +26,16 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
-} 
+    "prefer-stable": true,
+    "repository": [
+        {
+            "type": "git",
+            "url": "https://github.com/digimantra/digi-notification"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/digimantra/digi-notification/issues",
+        "forum": "https://github.com/digimantra/digi-notification/discussions",
+        "source": "https://github.com/digimantra/digi-notification"
+    }
+}

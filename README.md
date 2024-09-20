@@ -1,8 +1,8 @@
 # Laravel FCM Notifications Package
 
-![Packagist Version](https://img.shields.io/packagist/v/legacy-fcm/laravel-fcm-notifications)
-![Packagist Downloads](https://img.shields.io/packagist/dt/legacy-fcm/laravel-fcm-notifications)
-![GitHub License](https://img.shields.io/github/license/legacy-fcm/laravel-fcm-notifications?style=flat-square)
+![Packagist Version](https://img.shields.io/packagist/v/digimantra/digi-notifications)
+![Packagist Downloads](https://img.shields.io/packagist/dt/digimantra/digi-notifications)
+![GitHub License](https://img.shields.io/github/license/digimantra/digi-notifications?style=flat-square)
 
 This package provides an easy way to send Firebase Cloud Messaging (FCM) push notifications in Laravel applications using Google's Firebase API.
 
@@ -30,7 +30,7 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 1. **Install via Composer**
 
     ```bash
-    composer require legacy-fcm/laravel-fcm-notifications
+    composer require digimantra/digi-notifications
     ```
 
 2. **Publish Configuration**
@@ -94,7 +94,6 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 
 ### To enable logging, add this to your `.env` file:
     FCM_LOGGING=true
-
     Set to false to disable logging.
 
 ## Known Issues

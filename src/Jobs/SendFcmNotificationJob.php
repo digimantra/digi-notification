@@ -61,29 +61,41 @@ class SendFcmNotificationJob implements ShouldQueue
                                 ]);
 
                             $responseJson = $response->json();
-                            Log::info('FCM response', ['response' => $responseJson]);
+                            if (config('fcm.logging')) {
+                                Log::info('FCM response', ['response' => $responseJson]);
+                            }
                             if (isset($responseJson['error'])) {
-                                Log::error('FCM error', ['error' => $responseJson['error']]);
+                                if (config('fcm.logging')) {
+                                    Log::error('FCM error', ['error' => $responseJson['error']]);
+                                }
                                 return 0;
                             }
                         } catch (\Exception $e) {
-                            Log::error('Error sending FCM notification for token', [
-                                'token' => $token,
-                                'error' => $e->getMessage(),
-                            ]);
+                            if (config('fcm.logging')) {
+                                Log::error('Error sending FCM notification for token', [
+                                    'token' => $token,
+                                    'error' => $e->getMessage(),
+                                ]);
+                            }
                             return 0;
                         }
                     }
                 } else {
-                    Log::info('No valid FCM tokens found.');
+                    if (config('fcm.logging')) {
+                        Log::info('No valid FCM tokens found.');
+                    }
                 }
                 return 1;
             } else {
-                Log::error('Failed to fetch access token.');
+                if (config('fcm.logging')) {
+                    Log::error('Failed to fetch access token.');
+                }
                 return 0;
             }
         } catch (\Exception $e) {
-            Log::error('Error initializing Google Client', ['error' => $e->getMessage()]);
+            if (config('fcm.logging')) {
+                Log::error('Error initializing Google Client', ['error' => $e->getMessage()]);
+            }
             return 0;
         }
     }
