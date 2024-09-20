@@ -86,26 +86,26 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 ### env
     QUEUE_CONNECTION=database
 
-# Then, create the `jobs` table and run the migration:
+### Then, create the `jobs` table and run the migration:
     php artisan queue:table
     php artisan migrate
 
-### Logging
+## Logging
 
-# To enable logging, add this to your `.env` file:
+### To enable logging, add this to your `.env` file:
     FCM_LOGGING=true
 
     Set to false to disable logging.
 
-### Known Issues
+## Known Issues
 Ensure FCM tokens are valid, as invalid tokens might cause delivery failures.
 Invalid service account credentials will cause the package to fail to obtain an access token from Firebase.
 
-### License
+## License
 This package is open-sourced under the MIT license.
 
-### Contribution
+## Contribution
 Feel free to contribute by opening issues or submitting pull requests for new features or bug fixes.
 
-### Support
+## Support
 For support or more details, you can reach out at onkar.soni@digimantra.com.
