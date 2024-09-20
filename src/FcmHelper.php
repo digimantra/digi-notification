@@ -11,7 +11,7 @@ class FcmHelper
     {
         if (empty($tokens)) {
             Log::info('No FCM tokens found for sending notifications.');
-            return 0; // No tokens, so no notification sent
+            return 0; // No tokens, no notification sent
         }    
         try { 
             SendFcmNotificationJob::dispatch($tokens, $title, $body, $data);

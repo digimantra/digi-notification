@@ -77,8 +77,7 @@ class SendFcmNotificationJob implements ShouldQueue
                 } else {
                     Log::info('No valid FCM tokens found.');
                 }
-
-                return 1; // Success
+                return 1;
             } else {
                 Log::error('Failed to fetch access token.');
                 return 0;
