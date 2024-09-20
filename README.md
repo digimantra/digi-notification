@@ -107,4 +107,4 @@ This package is open-sourced under the MIT license.
 Feel free to contribute by opening issues or submitting pull requests for new features or bug fixes.
 
 ## Support
-For support or more details you can reach out at onkar.soni@digimantra.com.
+For support or more details you can reach out at it@digimantra.com.
