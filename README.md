@@ -15,7 +15,6 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 - [Logging](#logging)
 - [Known Issues](#known-issues)
 - [License](#license)
-- [Contribution](#contribution)
 - [Support](#support)
 
 ## Requirements
@@ -30,13 +29,13 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 1. **Install via Composer**
 
     ```bash
-    composer require digimantra/digi-notifications
+    composer require digimantra/digi-notification
     ```
 
 2. **Publish Configuration and Run Migration**
 
     ```bash
-    php artisan vendor:publish --tag=config --provider="LegacyFcm\FcmHelper\FcmServiceProvider"
+    php artisan vendor:publish --tag=config --provider="DigiNotification\FcmHelper\FcmServiceProvider"
     ```
 
     ```bash
@@ -56,11 +55,11 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 
 ## Usage
 
-### Sending FCM Notifications
+### Sending FCM Notifications:
 
-    ```php
-    use LegacyFcm\FcmHelper\FcmHelper;
+```php
 
+<<<<<<< HEAD
     $tokens = ['device_token_1', 'device_token_2'];
     $title = 'New Notification';
     $body = 'This is the body of the notification';
@@ -68,20 +67,22 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
     $type = 'sent to';
     
     FcmHelper::sendFcmNotification($tokens, $title, $body, $data);
+=======
+### Use Namespaces
+use DigiNotification\FcmHelper\FcmHelper; 
+>>>>>>> 46f93f51ffba71aab9aabf380a9b8a1f678e797e
 
-    // $tokens: Array of device tokens to which the notification will be sent.
-    // $title: The title of the notification.
-    // $body: The body content of the notification.
-    // $data: (Optional) Additional custom data.
+### Assigning variables 
+$tokens = ['device_token_1', 'device_token_2']; // Array of device tokens to which the notification will be sent.
+$title = 'New Notification'; // The title of the notification.
+$body = 'This is the body of the notification'; // The body content of the notification.
+$data = ['key' => 'value']; // (Optional) Additional custom data.
 
-    The notifications will be sent in the background using Laravel queues.
+### Example Send FCM notificaiton Dispatch
+FcmHelper::sendFcmNotification($tokens, $title, $body, $data);  
 
-    ### Example Job Dispatch
+```
 
-    use LegacyFcm\FcmHelper\Jobs\SendFcmNotificationJob;
-
-    SendFcmNotificationJob::dispatch($tokens, $title, $body, $data);
-    ```
 ## Configuration
 
 ### Queue Configuration
@@ -95,21 +96,22 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
     php artisan queue:table
     php artisan migrate
 
+
 ## Logging
 
 ### To enable logging, add this to your `.env` file:
     FCM_LOGGING=true
     Set to false to disable logging.
 
+
 ## Known Issues
-Ensure FCM tokens are valid, as invalid tokens might cause delivery failures.
-Invalid service account credentials will cause the package to fail to obtain an access token from Firebase.
+    Ensure FCM tokens are valid, as invalid tokens might cause delivery failures.
+    Invalid service account credentials will cause the package to fail to obtain an access token from Firebase.
+
 
 ## License
-This package is open-sourced under the MIT license.
+    This package is open-sourced under the MIT license.
 
-## Contribution
-Feel free to contribute by opening issues or submitting pull requests for new features or bug fixes.
 
 ## Support
-For support or more details you can reach out at it@digimantra.com.
+    For support or more details you can reach out at it@digimantra.com.

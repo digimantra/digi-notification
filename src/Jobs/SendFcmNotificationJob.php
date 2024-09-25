@@ -1,5 +1,5 @@
 <?php 
-namespace LegacyFcm\FcmHelper\Jobs;
+namespace DigiNotification\FcmHelper\Jobs;
 
 use Google\Client as GoogleClient;
 use Google\Service\FirebaseCloudMessaging;

@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "LegacyFcm\\FcmHelper\\": "src/"
+            "DigiNotification\\FcmHelper\\": "src/"
         }
     },
    "require": {
@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LegacyFcm\\FcmHelper\\FcmServiceProvider"
+                "DigiNotification\\FcmHelper\\FcmServiceProvider"
             ]
         }
     },
