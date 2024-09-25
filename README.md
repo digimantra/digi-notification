@@ -33,10 +33,14 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
     composer require digimantra/digi-notifications
     ```
 
-2. **Publish Configuration**
+2. **Publish Configuration and Run Migration**
 
     ```bash
     php artisan vendor:publish --tag=config --provider="LegacyFcm\FcmHelper\FcmServiceProvider"
+    ```
+
+    ```bash
+    php artisan migrate
     ```
 
 3. **Set Up Environment Variables**
@@ -61,6 +65,7 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
     $title = 'New Notification';
     $body = 'This is the body of the notification';
     $data = ['key' => 'value']; // Optional custom data
+    $type = 'sent to';
     
     FcmHelper::sendFcmNotification($tokens, $title, $body, $data);
 
