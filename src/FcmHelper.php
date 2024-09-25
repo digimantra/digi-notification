@@ -3,8 +3,8 @@
 namespace DigiNotification\FcmHelper;
 
 use DigiNotification\FcmHelper\Jobs\SendFcmNotificationJob;
+use DigiNotification\FcmHelper\Models\PushNotification;
 use Illuminate\Support\Facades\Log;
-use LegacyFcm\FcmHelper\Models\PushNotification;
 
 class FcmHelper
 {

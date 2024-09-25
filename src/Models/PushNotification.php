@@ -9,7 +9,7 @@ class PushNotification extends Model
 {
     use HasFactory;
 
-    protected $table = 'push_notifications';
+    protected $table = 'notifications';
     protected $fillable = [
         'title',
         'content',
