@@ -1,6 +1,6 @@
 <?php
 
-namespace LegacyFcm\FcmHelper\Models;
+namespace DigiNotification\FcmHelper\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
