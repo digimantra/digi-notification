@@ -59,7 +59,6 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
 
 ```php
 
-<<<<<<< HEAD
     $tokens = ['device_token_1', 'device_token_2'];
     $title = 'New Notification';
     $body = 'This is the body of the notification';
@@ -67,10 +66,8 @@ This package provides an easy way to send Firebase Cloud Messaging (FCM) push no
     $type = 'sent to';
     
     FcmHelper::sendFcmNotification($tokens, $title, $body, $data);
-=======
 ### Use Namespaces
 use DigiNotification\FcmHelper\FcmHelper; 
->>>>>>> 46f93f51ffba71aab9aabf380a9b8a1f678e797e
 
 ### Assigning variables 
 $tokens = ['device_token_1', 'device_token_2']; // Array of device tokens to which the notification will be sent.
